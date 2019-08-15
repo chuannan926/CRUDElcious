@@ -1,0 +1,48 @@
+@model Dish
+<a href ="/">Home</a>
+<h1>Add a NEW Dish!!</h1>
+<div class="Dish">
+    <form asp-action="Create" asp-controller="Home" method="post">
+        
+        
+        <span asp-validation-for="Chef_Name"></span> <!-- This line adds validation error messages -->
+        <label asp-for="Chef_Name"></label> <!-- This creates a label -->
+        <input asp-for="Chef_Name"/>
+        <br>
+        
+        <span asp-validation-for="Dish_Name"></span> <!-- This line adds validation error messages -->
+        <label asp-for="Dish_Name"></label> <!-- This creates a label -->
+        <input asp-for="Dish_Name"/>
+        <br>
+        
+        <span asp-validation-for="Calories"></span> <!-- This line adds validation error messages -->
+        <label asp-for="Calories"></label> <!-- This creates a label -->
+        <input asp-for="Calories"/>
+        <br>
+
+
+        <span asp-validation-for="Tastiness"></span> <!-- This line adds validation error messages -->
+        <label asp-for="Tastiness"></label> <!-- This creates a label -->
+        <select asp-for="Tastiness">   
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>   
+        </select>
+        
+        
+        
+        <span asp-validation-for="Description"></span> <!-- This line adds validation error messages -->
+        <label asp-for="Description"></label> <!-- This creates a label -->
+        <input asp-for="Description"/>
+        <br>            
+
+
+        <button type="submit">Add a Dish</button>
+    </form>
+
+
+
+
+</div>
